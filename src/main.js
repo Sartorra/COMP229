@@ -12,4 +12,4 @@ app.get('/', (req, res) => {
 })
 
 // Connect the listeners
-ServerWrapper.ConnectListeners();
+ServerWrapper.ConnectListeners(80, 443);
