@@ -3,6 +3,7 @@
     "express": "^4.18.1"
   },
   "name": "comp229",
+  "type": "module",
   "description": "[**COMP229**](https://github.com/Sartorra/COMP229.git)\r ---\r Initial commit [README.md](https://github.com/Sartorra/COMP229/blob/main/README.md)",
   "version": "1.0.0",
   "main": "src/main.js",

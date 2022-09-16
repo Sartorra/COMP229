@@ -1,4 +1,6 @@
-const express = require('express')
+import { eJsServerWrapper } from '../eJsServerWrapper/index.js'
+import express from 'express'
+
 const app = express()
 const port = 443
 

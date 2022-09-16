@@ -1,0 +1,3 @@
+[submodule "eJsServerWrapper"]
+	path = eJsServerWrapper
+	url = https://github.com/Sartorra/eJsServerWrapper.git
