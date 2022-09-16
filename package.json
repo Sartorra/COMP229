@@ -5,7 +5,7 @@
   "name": "comp229",
   "description": "[**COMP229**](https://github.com/Sartorra/COMP229.git)\r ---\r Initial commit [README.md](https://github.com/Sartorra/COMP229/blob/main/README.md)",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/main.js",
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
