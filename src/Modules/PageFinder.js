@@ -4,7 +4,7 @@
 
 import fs from 'fs'
 
-let noPage = fs.readFileSync("./src/Pages/404.html", "utf8")
+let noPage = fs.readFileSync("./src/Pages/404.ejs", "utf8")
 
 let sanitizeUrl = (url) => {
     // Sanitize any form of ../ to prevent directory traversal
@@ -29,7 +29,7 @@ let sanitizeUrl = (url) => {
 let hasFileExtension = (url) => {
     // Check if there is a file extension, if not add .html
     if (!url.includes(".")) {
-        url += ".html"
+        url += ".ejs"
     }
 
     return url
@@ -45,7 +45,7 @@ let hasFileExtension = (url) => {
 let isRootDirectory = (url) => {
     // Check if the url is the root directory
     if (url === "/") {
-        url = "/index.html"
+        url = "/index.ejs"
     }
 
     return url

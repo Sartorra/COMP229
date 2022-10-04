@@ -1,6 +1,14 @@
 import { eJsServerWrapper } from '../eJsServerWrapper/index.js'
 import express from 'express'
 import fs from 'fs'
+import cookieParser from 'cookie-parser'
+import morgan from 'morgan'
+import compression from 'compression'
+import path from 'path'
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 let certPath = "/var/www/site/"
 
@@ -28,5 +36,11 @@ async function setupRouters() {
 }
 
 // Initialize the server
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'Pages'));
+app.use(compression());
+app.use(cookieParser());
+app.use(express.static("public"));
+app.use(express.json());
 await setupRouters();
 ServerWrapper.ConnectListeners(80, 443);

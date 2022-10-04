@@ -16,12 +16,12 @@ router.get('*', (req, res) => {
     // Check if the page was found
     if (!page.pageFound) {
         // Respond with an error message.
-        res.status(404).send(page.pageContents);
+        res.status(404).render('404', { url: url });
         return;
     }
 
     // Send the page
-    res.send(page.pageContents);
+    res.render(url === "/" ? "index" : url);
 });
 
 export { router }
