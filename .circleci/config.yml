@@ -1,0 +1,10 @@
+jobs:
+    build:
+      docker:
+        image: cimg/node:12.16
+      steps:
+        - checkout
+        - run: |
+            docker build -t express-app .
+
+          
