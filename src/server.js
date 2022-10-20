@@ -8,7 +8,7 @@ if (args.length === 0) {
     console.log('No certificate specified\nNot running in https mode');
 } else {
     // Slice the two certificates apart.
-    const certificates = args.toString().split('END CERTIFICATE-----');
+    const certificates = args.toString().split('END PRIVATE KEY-----');
     console.log(certificates);
     const options = {
         key: certificates[0],
@@ -19,6 +19,3 @@ if (args.length === 0) {
 }
 
 http.createServer(expressApp).listen(80);
-
-
-// docker run -d -p 80:80 -p 443:443 --name express-app styxies/express_app:latest `cat /var/key.pem`,`cat /var/cert.pem`
