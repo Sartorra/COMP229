@@ -1,0 +1,1 @@
+module.exports = require(`${process.cwd()}/src/config/env/${process.env.NODE_ENV}.js`);
