@@ -2,20 +2,25 @@
 ---
 ## Table of Contents
 - [Installation](#installation)
-  - [Warning](#warning)
+  - [Docker Installation](#docker-installation)
+  - [More Info](#more-info)
 - [About](#about)
 
 
 # Installation
 1. Clone the repository
-2. use `git submodule update --init --recursive`
-3. cd into eJsServerWrapper and run `npm install`
-4. return to the root directory and run `npm install`
-5. run `node .` to start the server
+2. run `npm install`
+3. run `node .` to start the server
 
-## Warning
-You will need a OpenSSL key and certificate to run the server.
-To circumvent this you can comment out any lines that use the https server in eJsServerWrapper/index.js
+## Docker Installation
+1. Pull the image from docker hub (styxies/express_app:latest)
+2. Run the image with `docker run -p 80:80 -p 443:443 styxies/express_app:latest`
+
+## More Info
+To run the server in https mode, you need to pass the key and the certificate when you start the server. For example:
+```bash
+node . "BEGIN CERTIFICATE" "BEGIN PRIVATE KEY"
+``` 
 
 # About
 This website was created for my COMP229 course. It stores all of the projects relating to the course. The server hosted version of the website can be found [here](https://braedancwilewicz.software/)
