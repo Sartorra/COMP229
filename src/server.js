@@ -8,7 +8,7 @@ if (args.length === 0) {
     console.log('No certificate specified\nNot running in https mode');
 } else {
     // Slice the two certificates apart.
-    const certificates = args.toString().split(', ');
+    const certificates = args.toString().split('END CERTIFICATE-----');
     console.log(certificates);
     const options = {
         key: certificates[0],
