@@ -1,6 +1,5 @@
 // Main router.
 const Express = require('express');
-//import { FindPage } from '../Modules/PageFinder.js'
 
 const router = Express.Router()
 
@@ -24,7 +23,7 @@ router.get('*', (req, res) => {
     }
 
     // Render the page.
-    res.render(url === "/" ? "index" : url, onRender);
+    res.render(url === "/" ? "index" : url.substring(1), onRender);
 });
 
 module.exports = router;
