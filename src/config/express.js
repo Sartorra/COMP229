@@ -6,7 +6,6 @@ const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const session = require('express-session')
 const fs = require('fs');
-const path = require('path');
 
 // Setup the express app
 let app = express();
@@ -53,8 +52,6 @@ for (let route of fs.readdirSync(`${process.cwd()}/src/app/routes`)) {
 let router = require(`${process.cwd()}/src/app/routes/index.server.routes`);
 router(app);
 console.log(`Loaded route: index.server.routes.js`);
-
-
 
 // export the app
 module.exports = app;
